@@ -13,7 +13,8 @@ namespace WindowsFormsApplication1
         {
             MySqlConnection conectar = new MySqlConnection("server=cualesmiip.pe; database=cualesmi_api; Uid=cualesmi_web; pwd=vji2002;");
             conectar.Open();
-            return conectar;
+                return conectar;
+          
         }
     }
 }
