@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1.forms
 {
     public partial class frmInicio : Form
     {
-        private int childFormNumber = 0;
+        //private int childFormNumber = 0;
 
         public frmInicio()
         {
