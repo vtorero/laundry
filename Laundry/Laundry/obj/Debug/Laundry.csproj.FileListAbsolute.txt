@@ -1,0 +1,10 @@
+D:\Lavanderia\Laundry\Laundry\bin\Debug\Laundry.exe.config
+D:\Lavanderia\Laundry\Laundry\bin\Debug\Laundry.exe
+D:\Lavanderia\Laundry\Laundry\bin\Debug\Laundry.pdb
+D:\Lavanderia\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\Lavanderia\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Lavanderia\Laundry\Laundry\obj\Debug\Laundry.csproj.GenerateResource.Cache
+D:\Lavanderia\Laundry\Laundry\obj\Debug\Laundry.exe
+D:\Lavanderia\Laundry\Laundry\obj\Debug\Laundry.pdb
+D:\Lavanderia\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmInicio.resources
+D:\Lavanderia\Laundry\Laundry\obj\Debug\Laundry.csprojResolveAssemblyReference.cache
