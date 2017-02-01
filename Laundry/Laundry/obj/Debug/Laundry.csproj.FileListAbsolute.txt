@@ -8,3 +8,14 @@ D:\Lavanderia\Laundry\Laundry\obj\Debug\Laundry.exe
 D:\Lavanderia\Laundry\Laundry\obj\Debug\Laundry.pdb
 D:\Lavanderia\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmInicio.resources
 D:\Lavanderia\Laundry\Laundry\obj\Debug\Laundry.csprojResolveAssemblyReference.cache
+D:\laundry\Laundry\Laundry\bin\Debug\Laundry.exe.config
+D:\laundry\Laundry\Laundry\obj\Debug\Laundry.exe
+D:\laundry\Laundry\Laundry\obj\Debug\Laundry.pdb
+D:\laundry\Laundry\Laundry\bin\Debug\Laundry.exe
+D:\laundry\Laundry\Laundry\bin\Debug\Laundry.pdb
+D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmInicio.resources
+D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csproj.GenerateResource.Cache
+D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csprojResolveAssemblyReference.cache
+D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmPrendas.resources

@@ -80,7 +80,14 @@
     <Compile Include="forms\frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\frmPrendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmPrendas.Designer.cs">
+      <DependentUpon>frmPrendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Prenda.cs" />
+    <Compile Include="Persistencia\PrendaDao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -88,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmPrendas.resx">
+      <DependentUpon>frmPrendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
