@@ -13,5 +13,18 @@ namespace WindowsFormsApplication1.Models
         public string Descripcion { get; set; }
         public float precioServicio { get; set; }
 
+
+
+        public Prenda() { }
+
+        public Prenda(int idPrenda, string NombrePrenda, string Descripcion, float precioServicio)
+        {
+            this.idPrenda = idPrenda;
+            this.NombrePrenda = NombrePrenda;
+            this.Descripcion = Descripcion;
+            this.precioServicio = precioServicio;
+
+        }
+
     }
 }

@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.forms
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form1();
+            Form childForm = new frmPrendas();
             childForm.MdiParent = this;
             childForm.Text = "Mantenimiento de Prendas";
             childForm.Show();
