@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1.Persistencia
             MySqlCommand _comando = new MySqlCommand(String.Format(
            "SELECT idPrenda as Código, NombrePrenda as Nombre, DescripcionPrenda as Descripción, PrecioServicio as Precio FROM Prenda"), BdComun.ObtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
+            
             while (_reader.Read())
             {
                 Prenda prenda = new Prenda();

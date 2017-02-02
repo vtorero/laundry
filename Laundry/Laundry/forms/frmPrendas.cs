@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,7 @@ namespace WindowsFormsApplication1.forms
 {
     public partial class frmPrendas : Form
     {
+        ReportDocument cryrep = new ReportDocument();
         public frmPrendas()
         {
             InitializeComponent();
@@ -47,6 +50,18 @@ namespace WindowsFormsApplication1.forms
         {
             //listView1.
                        dgvPrenda.DataSource = PrendaDao.Buscar();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MySqlDataAdapter myadap = new MySqlDataAdapter(String.Format(
+          "SELECT idPrenda, NombrePrenda, DescripcionPrenda, PrecioServicio FROM Prenda"), BdComun.ObtenerConexion());
+            DataSet ds = new DataSet();
+            myadap.Fill(ds, "Prendas");
+            cryrep.Load(@"D:\laundry\Laundry\Laundry\Reportes\crPrendas.rpt");
+            cryrep.SetDataSource(ds);
+            crystalReportViewer1.ReportSource = cryrep;          
+
         }
     }
 }
