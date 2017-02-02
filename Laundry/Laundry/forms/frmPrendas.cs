@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1.forms
 
         private void frmPrendas_Load(object sender, EventArgs e)
         {
-            dgvPrenda.DataSource = PrendaDao.Buscar();
+                       dgvPrenda.DataSource = PrendaDao.Buscar();
         }
     }
 }
