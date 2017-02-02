@@ -60,7 +60,9 @@ namespace WindowsFormsApplication1.forms
             myadap.Fill(ds, "Prendas");
             cryrep.Load(@"D:\laundry\Laundry\Laundry\Reportes\crPrendas.rpt");
             cryrep.SetDataSource(ds);
-            crystalReportViewer1.ReportSource = cryrep;          
+            frmReporte rt = new frmReporte();
+            rt.crystalReportViewer1.ReportSource = cryrep;
+            rt.Show();﻿
 
         }
     }
