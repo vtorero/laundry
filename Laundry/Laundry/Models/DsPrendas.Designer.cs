@@ -279,13 +279,13 @@ namespace WindowsFormsApplication1.Models {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class PrendasDataTable : global::System.Data.TypedTableBase<PrendasRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnidPrenda;
             
             private global::System.Data.DataColumn columnNombrePrenda;
             
-            private global::System.Data.DataColumn columnDescipcion;
+            private global::System.Data.DataColumn columnDescripcionPrenda;
             
-            private global::System.Data.DataColumn columnprecioServicio;
+            private global::System.Data.DataColumn columnPrecioServicio;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -322,9 +322,9 @@ namespace WindowsFormsApplication1.Models {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn idPrendaColumn {
                 get {
-                    return this.columnid;
+                    return this.columnidPrenda;
                 }
             }
             
@@ -338,17 +338,17 @@ namespace WindowsFormsApplication1.Models {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DescipcionColumn {
+            public global::System.Data.DataColumn DescripcionPrendaColumn {
                 get {
-                    return this.columnDescipcion;
+                    return this.columnDescripcionPrenda;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn precioServicioColumn {
+            public global::System.Data.DataColumn PrecioServicioColumn {
                 get {
-                    return this.columnprecioServicio;
+                    return this.columnPrecioServicio;
                 }
             }
             
@@ -389,13 +389,13 @@ namespace WindowsFormsApplication1.Models {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PrendasRow AddPrendasRow(string id, string NombrePrenda, string Descipcion, string precioServicio) {
+            public PrendasRow AddPrendasRow(string idPrenda, string NombrePrenda, string DescripcionPrenda, string PrecioServicio) {
                 PrendasRow rowPrendasRow = ((PrendasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
+                        idPrenda,
                         NombrePrenda,
-                        Descipcion,
-                        precioServicio};
+                        DescripcionPrenda,
+                        PrecioServicio};
                 rowPrendasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPrendasRow);
                 return rowPrendasRow;
@@ -418,23 +418,23 @@ namespace WindowsFormsApplication1.Models {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
+                this.columnidPrenda = base.Columns["idPrenda"];
                 this.columnNombrePrenda = base.Columns["NombrePrenda"];
-                this.columnDescipcion = base.Columns["Descipcion"];
-                this.columnprecioServicio = base.Columns["precioServicio"];
+                this.columnDescripcionPrenda = base.Columns["DescripcionPrenda"];
+                this.columnPrecioServicio = base.Columns["PrecioServicio"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
+                this.columnidPrenda = new global::System.Data.DataColumn("idPrenda", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidPrenda);
                 this.columnNombrePrenda = new global::System.Data.DataColumn("NombrePrenda", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombrePrenda);
-                this.columnDescipcion = new global::System.Data.DataColumn("Descipcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescipcion);
-                this.columnprecioServicio = new global::System.Data.DataColumn("precioServicio", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprecioServicio);
+                this.columnDescripcionPrenda = new global::System.Data.DataColumn("DescripcionPrenda", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripcionPrenda);
+                this.columnPrecioServicio = new global::System.Data.DataColumn("PrecioServicio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecioServicio);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -577,17 +577,17 @@ namespace WindowsFormsApplication1.Models {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string id {
+            public string idPrenda {
                 get {
                     try {
-                        return ((string)(this[this.tablePrendas.idColumn]));
+                        return ((string)(this[this.tablePrendas.idPrendaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id\' de la tabla \'Prendas\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idPrenda\' de la tabla \'Prendas\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrendas.idColumn] = value;
+                    this[this.tablePrendas.idPrendaColumn] = value;
                 }
             }
             
@@ -609,46 +609,46 @@ namespace WindowsFormsApplication1.Models {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Descipcion {
+            public string DescripcionPrenda {
                 get {
                     try {
-                        return ((string)(this[this.tablePrendas.DescipcionColumn]));
+                        return ((string)(this[this.tablePrendas.DescripcionPrendaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descipcion\' de la tabla \'Prendas\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DescripcionPrenda\' de la tabla \'Prendas\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrendas.DescipcionColumn] = value;
+                    this[this.tablePrendas.DescripcionPrendaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string precioServicio {
+            public string PrecioServicio {
                 get {
                     try {
-                        return ((string)(this[this.tablePrendas.precioServicioColumn]));
+                        return ((string)(this[this.tablePrendas.PrecioServicioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'precioServicio\' de la tabla \'Prendas\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PrecioServicio\' de la tabla \'Prendas\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrendas.precioServicioColumn] = value;
+                    this[this.tablePrendas.PrecioServicioColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsidNull() {
-                return this.IsNull(this.tablePrendas.idColumn);
+            public bool IsidPrendaNull() {
+                return this.IsNull(this.tablePrendas.idPrendaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetidNull() {
-                this[this.tablePrendas.idColumn] = global::System.Convert.DBNull;
+            public void SetidPrendaNull() {
+                this[this.tablePrendas.idPrendaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -665,26 +665,26 @@ namespace WindowsFormsApplication1.Models {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDescipcionNull() {
-                return this.IsNull(this.tablePrendas.DescipcionColumn);
+            public bool IsDescripcionPrendaNull() {
+                return this.IsNull(this.tablePrendas.DescripcionPrendaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDescipcionNull() {
-                this[this.tablePrendas.DescipcionColumn] = global::System.Convert.DBNull;
+            public void SetDescripcionPrendaNull() {
+                this[this.tablePrendas.DescripcionPrendaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsprecioServicioNull() {
-                return this.IsNull(this.tablePrendas.precioServicioColumn);
+            public bool IsPrecioServicioNull() {
+                return this.IsNull(this.tablePrendas.PrecioServicioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetprecioServicioNull() {
-                this[this.tablePrendas.precioServicioColumn] = global::System.Convert.DBNull;
+            public void SetPrecioServicioNull() {
+                this[this.tablePrendas.PrecioServicioColumn] = global::System.Convert.DBNull;
             }
         }
         
