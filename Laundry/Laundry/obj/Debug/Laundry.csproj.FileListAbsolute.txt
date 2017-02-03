@@ -20,3 +20,4 @@ D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csproj.GenerateResource.Cache
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmPrendas.resources
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmReporte.resources
 D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csprojResolveAssemblyReference.cache
+D:\laundry\Laundry\Laundry\bin\Debug\MySql.Data.dll
