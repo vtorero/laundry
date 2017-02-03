@@ -44,6 +44,7 @@
             this.crystalReportViewer1.ShowPageNavigateButtons = false;
             this.crystalReportViewer1.Size = new System.Drawing.Size(340, 252);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // frmReporte
             // 

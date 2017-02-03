@@ -48,8 +48,8 @@ namespace WindowsFormsApplication1.forms
 
         private void frmPrendas_Load(object sender, EventArgs e)
         {
-            //listView1.
-                       dgvPrenda.DataSource = PrendaDao.Buscar();
+       
+                      // dgvPrenda.DataSource = PrendaDao.Buscar();
         }
 
         private void button2_Click(object sender, EventArgs e)

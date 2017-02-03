@@ -35,9 +35,9 @@
             this.dgvPrenda = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrenda)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -79,16 +79,16 @@
             // dgvPrenda
             // 
             this.dgvPrenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrenda.Location = new System.Drawing.Point(21, 165);
+            this.dgvPrenda.Location = new System.Drawing.Point(31, 161);
             this.dgvPrenda.Name = "dgvPrenda";
-            this.dgvPrenda.Size = new System.Drawing.Size(517, 98);
+            this.dgvPrenda.Size = new System.Drawing.Size(506, 98);
             this.dgvPrenda.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(21, 269);
+            this.button2.Location = new System.Drawing.Point(31, 269);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 50);
+            this.button2.Size = new System.Drawing.Size(144, 50);
             this.button2.TabIndex = 5;
             this.button2.Text = "Reporte";
             this.button2.UseVisualStyleBackColor = true;
@@ -108,14 +108,14 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Nombre prenda:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Precio x Servicio:";
             // 
             // label2
             // 
@@ -126,14 +126,14 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Detalle adicional:";
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 106);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Precio x Servicio:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nombre prenda:";
             // 
             // button3
             // 
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 335);
+            this.ClientSize = new System.Drawing.Size(578, 335);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
