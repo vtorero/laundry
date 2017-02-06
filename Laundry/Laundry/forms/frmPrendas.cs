@@ -30,11 +30,21 @@ namespace WindowsFormsApplication1.forms
         private void button1_Click(object sender, EventArgs e)
         {
             Prenda prenda= new Prenda();
-            prenda.NombrePrenda = txtNombre.Text.Trim();
-            prenda.Descripcion = txtDescripcion.Text.Trim();
-            prenda.precioServicio = float.Parse(txtPrecio.Text.Trim());
+            int resultado = 0;
 
-            int resultado = PrendaDao.Agregar(prenda);
+
+            if ((!string.IsNullOrWhiteSpace(txtNombre.Text)) && (!string.IsNullOrWhiteSpace(txtDescripcion.Text)))
+            {
+                prenda.NombrePrenda = txtNombre.Text.Trim();
+                prenda.Descripcion = txtDescripcion.Text.Trim();
+                prenda.precioServicio = float.Parse(txtPrecio.Text.Trim());
+                resultado = PrendaDao.Agregar(prenda);
+            }
+            else {
+                resultado = 0;
+                MessageBox.Show("Debe ingresar los valores");
+            }
+
             if (resultado > 0)
             {
                 dgvPrenda.DataSource = PrendaDao.Buscar();
