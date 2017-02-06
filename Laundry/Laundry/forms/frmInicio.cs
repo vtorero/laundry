@@ -108,5 +108,13 @@ namespace WindowsFormsApplication1.forms
         {
 
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form childForm = new frmColor();
+            childForm.MdiParent = this;
+            childForm.Text = "Mantenimiento de Colores";
+            childForm.Show();
+        }
     }
 }

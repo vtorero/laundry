@@ -81,6 +81,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\frmColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmColor.Designer.cs">
+      <DependentUpon>frmColor.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,7 @@
     <Compile Include="forms\frmReporte.Designer.cs">
       <DependentUpon>frmReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Color.cs" />
     <Compile Include="Models\DsPrendas.cs">
       <DependentUpon>DsPrendas.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -109,6 +116,7 @@
       <DependentUpon>DsPrendas.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\Prenda.cs" />
+    <Compile Include="Persistencia\ColorDao.cs" />
     <Compile Include="Persistencia\PrendaDao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmColor.resx">
+      <DependentUpon>frmColor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
