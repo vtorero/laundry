@@ -40,13 +40,11 @@ namespace WindowsFormsApplication1.forms
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = saveFileDialog.FileName;
-            }
+           Form childForm = new frmClientes();
+            childForm.MdiParent = this;
+            childForm.Text = "Mantenimiento de Clientes";
+            childForm.Show();
+        
         }
 
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
