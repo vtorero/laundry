@@ -20,3 +20,6 @@ D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csproj.GenerateResource.Cache
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmPrendas.resources
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmReporte.resources
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmColor.resources
+D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmClientes.resources
+D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmServicio.resources
+D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csprojResolveAssemblyReference.cache

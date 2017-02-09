@@ -104,6 +104,7 @@
             this.exitToolStripMenuItem});
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.fileMenu.Name = "fileMenu";
+            this.fileMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
             this.fileMenu.Size = new System.Drawing.Size(106, 20);
             this.fileMenu.Text = "&Mantenimientos";
             this.fileMenu.Click += new System.EventHandler(this.fileMenu_Click);
@@ -143,6 +144,7 @@
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.saveAsToolStripMenuItem.Text = "C&lientes";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);

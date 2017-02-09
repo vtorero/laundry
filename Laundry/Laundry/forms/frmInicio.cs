@@ -29,13 +29,11 @@ namespace WindowsFormsApplication1.forms
 
         private void OpenFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
+            Form childForm = new frmServicio();
+            childForm.MdiParent = this;
+            childForm.Text = "Mantenimiento de Servicios";
+            childForm.Show();
+            
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)

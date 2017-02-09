@@ -47,7 +47,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(370, 269);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 50);
+            this.button1.Size = new System.Drawing.Size(165, 50);
             this.button1.TabIndex = 0;
             this.button1.Text = "&Grabar";
             this.button1.UseVisualStyleBackColor = true;
