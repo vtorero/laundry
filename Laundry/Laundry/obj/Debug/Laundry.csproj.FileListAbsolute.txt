@@ -22,4 +22,4 @@ D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmReporte.r
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmColor.resources
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmClientes.resources
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmServicio.resources
-D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csprojResolveAssemblyReference.cache
+D:\laundry\Laundry\Laundry\bin\Debug\MySql.Data.dll

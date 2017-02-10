@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -111,6 +113,25 @@ namespace WindowsFormsApplication1.forms
             childForm.MdiParent = this;
             childForm.Text = "Mantenimiento de Colores";
             childForm.Show();
+        }
+
+        private void toolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void prendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportDocument cryrep = new ReportDocument();
+            MySqlDataAdapter myadap = new MySqlDataAdapter(String.Format(
+         "SELECT idPrenda, NombrePrenda, DescripcionPrenda, PrecioServicio FROM Prenda"), BdComun.ObtenerConexion());
+            DataSet ds = new DataSet();
+            myadap.Fill(ds, "Prendas");
+            cryrep.Load(@"D:\laundry\Laundry\Laundry\Reportes\crPrendas.rpt");
+            cryrep.SetDataSource(ds);
+            frmReporte rt = new frmReporte();
+            rt.crystalReportViewer1.ReportSource = cryrep;
+            rt.Show();﻿
         }
     }
 }
