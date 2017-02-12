@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1.forms
 {
     public partial class frmClientes : Form
     {
+        int pos;
         public frmClientes()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace WindowsFormsApplication1.forms
             {
 
                 MessageBox.Show("Cliente guardado con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvClientes.DataSource = ClienteDao.Buscar();
             }
             else
             {
@@ -60,6 +62,26 @@ namespace WindowsFormsApplication1.forms
         {
             dgvClientes.DataSource = ClienteDao.Buscar();
         
+        }
+
+       
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            pos = dgvClientes.CurrentRow.Index;
+            txtNombres.Text = Convert.ToString(dgvClientes[1, pos].Value);
+            txtDNI.Text = Convert.ToString(dgvClientes[2, pos].Value);
+            txtEmail.Text = Convert.ToString(dgvClientes[3, pos].Value);
+            txtDireccion.Text = Convert.ToString(dgvClientes[4, pos].Value);
+            txtTelefono.Text = Convert.ToString(dgvClientes[5, pos].Value);
+
+
+            tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            pos = dgvClientes.CurrentRow.Index;
+            MessageBox.Show("Eliminar al cliente:"+Convert.ToString(dgvClientes[0, pos].Value));
         }
     }
 }
