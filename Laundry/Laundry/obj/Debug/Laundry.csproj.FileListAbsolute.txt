@@ -23,3 +23,4 @@ D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmColor.res
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmClientes.resources
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmServicio.resources
 D:\laundry\Laundry\Laundry\bin\Debug\MySql.Data.dll
+D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csprojResolveAssemblyReference.cache

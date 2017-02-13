@@ -19,7 +19,14 @@ namespace WindowsFormsApplication1.Persistencia
             return retorno;
         }
 
-        public static List<Cliente> Buscar()
+        public static int Eliminar(int idcliente) {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM Cliente where idCliente='{0}'", idcliente),BdComun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+
+        public static List<Cliente> Listar()
         {
             List<Cliente> _lista = new List<Cliente>();
 

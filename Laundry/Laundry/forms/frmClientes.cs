@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1.forms
             {
 
                 MessageBox.Show("Cliente guardado con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvClientes.DataSource = ClienteDao.Buscar();
+                dgvClientes.DataSource = ClienteDao.Listar();
             }
             else
             {
@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1.forms
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
-            dgvClientes.DataSource = ClienteDao.Buscar();
+            dgvClientes.DataSource = ClienteDao.Listar();
         
         }
 
@@ -81,7 +81,18 @@ namespace WindowsFormsApplication1.forms
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             pos = dgvClientes.CurrentRow.Index;
-            MessageBox.Show("Eliminar al cliente:"+Convert.ToString(dgvClientes[0, pos].Value));
+            string id=Convert.ToString(dgvClientes[0, pos].Value);
+             
+             DialogResult result = MessageBox.Show("Eliminar al cliente: " + id ,"Confirmar",MessageBoxButtons.YesNo);
+             if (result == DialogResult.Yes)
+             {
+                 ClienteDao.Eliminar(Convert.ToInt32(id));
+                 dgvClientes.DataSource = ClienteDao.Listar();
+                 MessageBox.Show("Cliente Eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+             }
+           
+           
         }
     }
 }
