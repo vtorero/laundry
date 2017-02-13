@@ -19,6 +19,16 @@ namespace WindowsFormsApplication1.Persistencia
             return retorno;
         }
 
+        public static int Modificar(Cliente cliente) {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE Cliente Set nombreCliente='{0}',dniCliente='{1}',correoCliente='{2}',direccionCliente='{3}',telefonoCliente='{4}' where idCliente='{5}'"
+            ,cliente.NombreCliente,cliente.dniCliente,cliente.correoCliente,cliente.direccionCliente,cliente.telefonoCliente,cliente.idCliente), BdComun.ObtenerConexion());
+            retorno= comando.ExecuteNonQuery();
+            return retorno;
+
+        
+        }
+
         public static int Eliminar(int idcliente) {
             int retorno = 0;
             MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM Cliente where idCliente='{0}'", idcliente),BdComun.ObtenerConexion());
@@ -31,7 +41,7 @@ namespace WindowsFormsApplication1.Persistencia
             List<Cliente> _lista = new List<Cliente>();
 
             MySqlCommand _comando = new MySqlCommand(String.Format(
-           "SELECT * FROM Cliente"), BdComun.ObtenerConexion());
+           "SELECT * FROM Cliente order by idCliente asc"), BdComun.ObtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
 
             while (_reader.Read())

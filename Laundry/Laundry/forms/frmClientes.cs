@@ -9,13 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Models;
 using WindowsFormsApplication1.Persistencia;
+using WindowsFormsApplication1.util;
 
 namespace WindowsFormsApplication1.forms
 {
     public partial class frmClientes : Form
     {
         int pos;
+        Validacion v = new Validacion();
+
         public frmClientes()
+        
         {
             InitializeComponent();
         }
@@ -25,6 +29,7 @@ namespace WindowsFormsApplication1.forms
 
             Cliente cliente = new Cliente();
             int resultado = 0;
+            string msj = "";
 
 
             if ((!string.IsNullOrWhiteSpace(txtNombres.Text)) 
@@ -37,8 +42,18 @@ namespace WindowsFormsApplication1.forms
                 cliente.correoCliente = txtEmail.Text.Trim();
                 cliente.direccionCliente = txtDireccion.Text.Trim();
                 cliente.telefonoCliente=txtTelefono.Text.Trim();
-                
+
+                if(btnGuardar.Text.Equals("&Registrar")){
+                 msj="Cliente registrado con Exito!!";
                 resultado = ClienteDao.Agregar(cliente);
+                }
+                if (btnGuardar.Text.Equals("&Actualizar"))
+                {
+                     msj="Cliente actualizado con Exito!!";
+                    cliente.idCliente = Convert.ToInt32(txtIDcliente.Text.Trim());
+                    resultado = ClienteDao.Modificar(cliente);
+                
+                }
             }
             else
             {
@@ -49,8 +64,11 @@ namespace WindowsFormsApplication1.forms
             if (resultado > 0)
             {
 
-                MessageBox.Show("Cliente guardado con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(msj, "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvClientes.DataSource = ClienteDao.Listar();
+                tabControl1.SelectedTab = tabPage2;
+                btnGuardar.Text = "&Registrar";
+                resetValores();
             }
             else
             {
@@ -68,6 +86,9 @@ namespace WindowsFormsApplication1.forms
         private void btnEditar_Click(object sender, EventArgs e)
         {
             pos = dgvClientes.CurrentRow.Index;
+            LblId.Visible = true;
+            txtIDcliente.Visible = true;
+            txtIDcliente.Text = Convert.ToString(dgvClientes[0, pos].Value);
             txtNombres.Text = Convert.ToString(dgvClientes[1, pos].Value);
             txtDNI.Text = Convert.ToString(dgvClientes[2, pos].Value);
             txtEmail.Text = Convert.ToString(dgvClientes[3, pos].Value);
@@ -76,6 +97,7 @@ namespace WindowsFormsApplication1.forms
 
 
             tabControl1.SelectedTab = tabPage1;
+            btnGuardar.Text = "&Actualizar";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -93,6 +115,34 @@ namespace WindowsFormsApplication1.forms
              }
            
            
+        }
+
+        private void resetValores() {
+            LblId.Text= "";
+            txtIDcliente.Text= "";
+            LblId.Visible = false;
+            txtIDcliente.Visible = false;
+            txtNombres.Text = "";
+            txtDNI.Text = "";
+            txtEmail.Text = "";
+            txtDireccion.Text = "";
+            txtTelefono.Text = "";
+        
+        }
+
+        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soloLetras(e);
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soloNumeros(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soloNumeros(e);
         }
     }
 }
