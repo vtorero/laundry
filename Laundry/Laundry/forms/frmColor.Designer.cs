@@ -46,7 +46,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(207, 38);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(219, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 23);
             this.button1.TabIndex = 0;
@@ -56,34 +57,38 @@
             // 
             // txtNombreColor
             // 
-            this.txtNombreColor.Location = new System.Drawing.Point(95, 13);
+            this.txtNombreColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreColor.Location = new System.Drawing.Point(99, 19);
             this.txtNombreColor.Name = "txtNombreColor";
-            this.txtNombreColor.Size = new System.Drawing.Size(84, 20);
+            this.txtNombreColor.Size = new System.Drawing.Size(169, 24);
             this.txtNombreColor.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 16);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(66, 18);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Nombre Color:";
+            this.label1.Text = "Nombre:";
             // 
             // labelValor
             // 
             this.labelValor.AutoSize = true;
-            this.labelValor.Location = new System.Drawing.Point(15, 44);
+            this.labelValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValor.Location = new System.Drawing.Point(6, 63);
             this.labelValor.Name = "labelValor";
-            this.labelValor.Size = new System.Drawing.Size(61, 13);
+            this.labelValor.Size = new System.Drawing.Size(87, 18);
             this.labelValor.TabIndex = 3;
             this.labelValor.Text = "Valor Color:";
             // 
             // txtValorColor
             // 
-            this.txtValorColor.Location = new System.Drawing.Point(95, 41);
+            this.txtValorColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorColor.Location = new System.Drawing.Point(99, 57);
             this.txtValorColor.Name = "txtValorColor";
-            this.txtValorColor.Size = new System.Drawing.Size(85, 20);
+            this.txtValorColor.Size = new System.Drawing.Size(114, 24);
             this.txtValorColor.TabIndex = 4;
             // 
             // label2
@@ -111,6 +116,7 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(175, 142);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 56);
@@ -126,6 +132,7 @@
             this.ClientSize = new System.Drawing.Size(321, 210);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmColor";
             this.Text = "Mantenimiento de Colores";
             this.groupBox1.ResumeLayout(false);

@@ -113,6 +113,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(102, 199);
+            this.txtTelefono.MaxLength = 20;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(146, 24);
             this.txtTelefono.TabIndex = 9;
@@ -132,6 +133,7 @@
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(102, 153);
+            this.txtDireccion.MaxLength = 150;
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(382, 40);
@@ -150,6 +152,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(102, 120);
+            this.txtEmail.MaxLength = 120;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(231, 24);
             this.txtEmail.TabIndex = 5;
@@ -168,6 +171,7 @@
             // 
             this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.Location = new System.Drawing.Point(100, 84);
+            this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(102, 24);
             this.txtDNI.TabIndex = 3;
@@ -186,6 +190,7 @@
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(100, 45);
+            this.txtNombres.MaxLength = 300;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(384, 24);
             this.txtNombres.TabIndex = 1;
@@ -259,6 +264,7 @@
             // 
             this.txtIDcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDcliente.Location = new System.Drawing.Point(102, 10);
+            this.txtIDcliente.MaxLength = 11;
             this.txtIDcliente.Name = "txtIDcliente";
             this.txtIDcliente.Size = new System.Drawing.Size(68, 24);
             this.txtIDcliente.TabIndex = 12;
