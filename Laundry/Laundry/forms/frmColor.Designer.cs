@@ -88,15 +88,17 @@
             this.txtValorColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValorColor.Location = new System.Drawing.Point(99, 57);
             this.txtValorColor.Name = "txtValorColor";
-            this.txtValorColor.Size = new System.Drawing.Size(114, 24);
+            this.txtValorColor.Size = new System.Drawing.Size(80, 24);
             this.txtValorColor.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 44);
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(197, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(7, 13);
+            this.label2.Size = new System.Drawing.Size(9, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "&";
             // 

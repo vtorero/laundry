@@ -31,6 +31,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtIDcliente = new System.Windows.Forms.TextBox();
+            this.LblId = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.LblId = new System.Windows.Forms.Label();
-            this.txtIDcliente = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -74,6 +74,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(749, 333);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -98,6 +99,28 @@
             this.tabPage1.Size = new System.Drawing.Size(741, 302);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento";
+            // 
+            // txtIDcliente
+            // 
+            this.txtIDcliente.Enabled = false;
+            this.txtIDcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDcliente.Location = new System.Drawing.Point(102, 10);
+            this.txtIDcliente.MaxLength = 11;
+            this.txtIDcliente.Name = "txtIDcliente";
+            this.txtIDcliente.Size = new System.Drawing.Size(68, 24);
+            this.txtIDcliente.TabIndex = 12;
+            this.txtIDcliente.Visible = false;
+            // 
+            // LblId
+            // 
+            this.LblId.AutoSize = true;
+            this.LblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblId.Location = new System.Drawing.Point(31, 13);
+            this.LblId.Name = "LblId";
+            this.LblId.Size = new System.Drawing.Size(26, 18);
+            this.LblId.TabIndex = 11;
+            this.LblId.Text = "ID:";
+            this.LblId.Visible = false;
             // 
             // btnGuardar
             // 
@@ -249,27 +272,6 @@
             this.dgvClientes.Size = new System.Drawing.Size(711, 226);
             this.dgvClientes.TabIndex = 0;
             // 
-            // LblId
-            // 
-            this.LblId.AutoSize = true;
-            this.LblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblId.Location = new System.Drawing.Point(31, 13);
-            this.LblId.Name = "LblId";
-            this.LblId.Size = new System.Drawing.Size(26, 18);
-            this.LblId.TabIndex = 11;
-            this.LblId.Text = "ID:";
-            this.LblId.Visible = false;
-            // 
-            // txtIDcliente
-            // 
-            this.txtIDcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDcliente.Location = new System.Drawing.Point(102, 10);
-            this.txtIDcliente.MaxLength = 11;
-            this.txtIDcliente.Name = "txtIDcliente";
-            this.txtIDcliente.Size = new System.Drawing.Size(68, 24);
-            this.txtIDcliente.TabIndex = 12;
-            this.txtIDcliente.Visible = false;
-            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,7 +281,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmClientes";
             this.Text = "frmClientes";
-            this.Load += new System.EventHandler(this.frmClientes_Load);
             this.groupBox1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

@@ -19,12 +19,33 @@ namespace WindowsFormsApplication1.Persistencia
             return retorno;
         }
 
-        public static List<Prenda> Buscar()
+
+        public static int Modificar(Prenda prenda)
+        {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE Prenda Set nombrePrenda='{0}',descripcionPrenda='{1}',precioServicio='{2}' where idPrenda='{3}'"
+            , prenda.NombrePrenda, prenda.Descripcion, prenda.precioServicio, prenda.idPrenda), BdComun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+
+
+        }
+
+        public static int Eliminar(int idprenda)
+        {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM Prenda where idPrenda='{0}'", idprenda), BdComun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+
+
+        public static List<Prenda> Listar()
         {
             List<Prenda> _lista = new List<Prenda>();
 
             MySqlCommand _comando = new MySqlCommand(String.Format(
-           "SELECT idPrenda as Código, NombrePrenda as Nombre, DescripcionPrenda as Descripción, PrecioServicio as Precio FROM Prenda"), BdComun.ObtenerConexion());
+           "SELECT idPrenda, nombrePrenda , descripcionPrenda, precioServicio FROM Prenda order by idPrenda"), BdComun.ObtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
             
             while (_reader.Read())

@@ -76,11 +76,7 @@ namespace WindowsFormsApplication1.forms
             }
         }
 
-        private void frmClientes_Load(object sender, EventArgs e)
-        {
-            dgvClientes.DataSource = ClienteDao.Listar();
-        
-        }
+     
 
        
         private void btnEditar_Click(object sender, EventArgs e)
@@ -143,6 +139,12 @@ namespace WindowsFormsApplication1.forms
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.soloNumeros(e);
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dgvClientes.RowCount == 0)
+                dgvClientes.DataSource = ClienteDao.Listar();
         }
     }
 }
