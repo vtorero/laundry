@@ -124,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 157);
+            this.label3.Location = new System.Drawing.Point(28, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 18);
             this.label3.TabIndex = 6;
@@ -150,7 +150,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(157, 157);
+            this.txtPrecio.Location = new System.Drawing.Point(157, 151);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(74, 24);
             this.txtPrecio.TabIndex = 3;
@@ -209,6 +209,7 @@
             // 
             this.dgvPrendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrendas.Location = new System.Drawing.Point(6, 6);
+            this.dgvPrendas.MultiSelect = false;
             this.dgvPrendas.Name = "dgvPrendas";
             this.dgvPrendas.Size = new System.Drawing.Size(568, 226);
             this.dgvPrendas.TabIndex = 3;

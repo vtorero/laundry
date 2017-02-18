@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1
     {
         public static MySqlConnection ObtenerConexion()
         {
-            MySqlConnection conectar = new MySqlConnection("server=67.23.231.144; database=cualesmi_api; Uid=cualesmi_web; pwd=vji2002;");
+            MySqlConnection conectar = new MySqlConnection("server=67.23.231.144; database=cualesmi_lavanderia; Uid=cualesmi_web; pwd=vji2002;");
             conectar.Open();
                 return conectar;
           

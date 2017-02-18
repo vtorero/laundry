@@ -66,10 +66,11 @@ namespace WindowsFormsApplication1.forms
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            if(dgvPrendas.RowCount==0)
+
+            if (dgvPrendas.RowCount == 0)
+            {
                 dgvPrendas.DataSource = PrendaDao.Listar();
-                
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
