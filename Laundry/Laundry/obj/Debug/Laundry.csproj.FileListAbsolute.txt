@@ -23,5 +23,5 @@ D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.Properties.Resourc
 D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csproj.GenerateResource.Cache
 D:\laundry\Laundry\Laundry\obj\Debug\Laundry.exe
 D:\laundry\Laundry\Laundry\obj\Debug\Laundry.pdb
-D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csprojResolveAssemblyReference.cache
 D:\laundry\Laundry\Laundry\obj\Debug\WindowsFormsApplication1.forms.frmLogin.resources
+D:\laundry\Laundry\Laundry\obj\Debug\Laundry.csprojResolveAssemblyReference.cache
