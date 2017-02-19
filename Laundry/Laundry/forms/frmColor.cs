@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Persistencia;
 
+
 namespace WindowsFormsApplication1.forms
 {
     public partial class frmColor : Form
@@ -57,6 +58,7 @@ namespace WindowsFormsApplication1.forms
                     txtValorColor.Text = colorDialog1.Color.Name;
                 }
                 else {
+                    lblColor.BackColor = colorDialog1.Color;
                     txtValorColor.Text = "#"+colorDialog1.Color.Name;
                 }
             }
@@ -66,13 +68,26 @@ namespace WindowsFormsApplication1.forms
         {
             WindowsFormsApplication1.Models.Color color = new WindowsFormsApplication1.Models.Color();
             int resultado = 0;
-
+            string msj = "";
 
             if ((!string.IsNullOrWhiteSpace(txtNombreColor.Text)) && (!string.IsNullOrWhiteSpace(txtValorColor.Text)))
             {
                 color.nombreColor = txtNombreColor.Text.Trim();
                 color.valorColor = txtValorColor.Text.Trim();
-                resultado = ColorDao.Agregar(color);
+
+                if (btnGuardar.Text.Equals("&Registrar"))
+                {
+                    msj = "Color registrado con éxito!!";
+                    resultado = ColorDao.Agregar(color);
+                }
+                if (btnGuardar.Text.Equals("&Actualizar"))
+                {
+                    msj = "Color actualizado con éxito!!";
+                    color.idColor= Convert.ToInt32(txtCodigo.Text.Trim());
+                    resultado = ColorDao.Modificar(color);
+
+                }
+
             }
             else
             {
@@ -83,11 +98,42 @@ namespace WindowsFormsApplication1.forms
             if (resultado > 0)
             {
 
-                MessageBox.Show("Color Guardada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(msj, "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvColores.DataSource = ColorDao.Listar();
+                tabControl1.SelectedTab = tabPage2;
+                btnGuardar.Text = "&Registrar";
+                resetValores();
             }
             else
             {
                 MessageBox.Show("No se pudo guardar el Color", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void resetValores()
+        {
+            lblCodigo.Text = "";
+            txtCodigo.Text = "";
+            lblCodigo.Visible = false;
+            txtCodigo.Visible = false;
+            txtNombreColor.Text = "";
+            txtValorColor.Text = "";
+            lblColor.BackColor = System.Drawing.ColorTranslator.FromHtml("White");
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            pos = dgvColores.CurrentRow.Index;
+            string id = Convert.ToString(dgvColores[0, pos].Value);
+
+            DialogResult result = MessageBox.Show("Eliminar el color: " + id, "Confirmar", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                ColorDao.Eliminar(Convert.ToInt32(id));
+                dgvColores.DataSource = ColorDao.Listar();
+                MessageBox.Show("Color eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
