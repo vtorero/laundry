@@ -214,7 +214,6 @@
             this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
             this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.statusBarToolStripMenuItem.Text = "&Barra de estado";
-            
             // 
             // toolsMenu
             // 
@@ -264,7 +263,6 @@
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
             this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.cascadeToolStripMenuItem.Text = "&Cascada";
-            
             // 
             // tileVerticalToolStripMenuItem
             // 
@@ -382,7 +380,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmInicio";
-            this.Text = "Laundry Services S.A";
+            this.Text = "Lavandería San Isidro S.A";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

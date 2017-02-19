@@ -154,10 +154,7 @@ namespace WindowsFormsApplication1.forms
            
         }
 
-        private void txtCodigo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+   
      
     }
 }

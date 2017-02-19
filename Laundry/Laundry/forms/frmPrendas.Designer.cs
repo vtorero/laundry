@@ -109,7 +109,7 @@
             this.txtCodigo.Size = new System.Drawing.Size(100, 24);
             this.txtCodigo.TabIndex = 8;
             this.txtCodigo.Visible = false;
-            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+  
             // 
             // lblCodigo
             // 

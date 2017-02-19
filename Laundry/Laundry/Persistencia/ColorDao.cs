@@ -20,12 +20,30 @@ namespace WindowsFormsApplication1.Persistencia
             return retorno;
         }
 
-        public static List<Color> Buscar()
+        public static int Modificar(Color color)
+        {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE Color Set nombreColor='{0}',valorColor='{1}' where idColor='{2}'"
+            ,color.nombreColor, color.valorColor, color.idColor), BdComun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+
+        }
+
+        public static int Eliminar(int idcolor)
+        {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM Color where idColor='{0}'", idcolor), BdComun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+
+        public static List<Color> Listar()
         {
             List<Color> _lista = new List<Color>();
 
             MySqlCommand _comando = new MySqlCommand(String.Format(
-           "SELECT idColor nombreColor FROM Color"), BdComun.ObtenerConexion());
+           "SELECT * FROM Color order by idColor"), BdComun.ObtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
 
             while (_reader.Read())

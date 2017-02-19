@@ -13,21 +13,56 @@ namespace WindowsFormsApplication1.forms
 {
     public partial class frmColor : Form
     {
+        int pos;
         public frmColor()
         {
+            
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+     
+
+           
+
+        private void tabControl1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (dgvColores.RowCount == 0)
+            {
+                dgvColores.DataSource = ColorDao.Listar();
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            pos = dgvColores.CurrentRow.Index;
+            lblCodigo.Visible = true;
+            txtCodigo.Visible = true;
+            txtCodigo.Text = Convert.ToString(dgvColores[0, pos].Value);
+            txtNombreColor.Text = Convert.ToString(dgvColores[1, pos].Value);
+            txtValorColor.Text = Convert.ToString(dgvColores[2, pos].Value);
+            lblColor.BackColor = System.Drawing.ColorTranslator.FromHtml(Convert.ToString(dgvColores[2,pos].Value));
+            
+            tabControl1.SelectedTab = tabPage1;
+            btnGuardar.Text = "&Actualizar";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 txtValorColor.Text = colorDialog1.Color.Name;
-                label2.BackColor = colorDialog1.Color;
+                if (colorDialog1.Color.IsKnownColor)
+                {
+                    lblColor.BackColor = colorDialog1.Color;
+                    txtValorColor.Text = colorDialog1.Color.Name;
+                }
+                else {
+                    txtValorColor.Text = "#"+colorDialog1.Color.Name;
+                }
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             WindowsFormsApplication1.Models.Color color = new WindowsFormsApplication1.Models.Color();
             int resultado = 0;
@@ -47,7 +82,7 @@ namespace WindowsFormsApplication1.forms
 
             if (resultado > 0)
             {
-                
+
                 MessageBox.Show("Color Guardada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -55,5 +90,6 @@ namespace WindowsFormsApplication1.forms
                 MessageBox.Show("No se pudo guardar el Color", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
     }
 }

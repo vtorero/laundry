@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1.util
                     e.Handled = true;
                 }
             }
-            catch (Exception ex) { 
+            catch (Exception) { 
             
             
             }
@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1.util
                     e.Handled = true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
 
