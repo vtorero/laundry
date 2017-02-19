@@ -122,8 +122,10 @@ namespace WindowsFormsApplication1.forms
             DataSet ds = new DataSet();
             myadap.Fill(ds, "Prendas");
             cryrep.Load(@"D:\laundry\Laundry\Laundry\Reportes\crPrendas.rpt");
+
             cryrep.SetDataSource(ds);
             frmReporte rt = new frmReporte();
+            rt.Text = "Reporte de prendas";
             rt.crystalReportViewer1.ReportSource = cryrep;
             rt.Show();﻿
         }
